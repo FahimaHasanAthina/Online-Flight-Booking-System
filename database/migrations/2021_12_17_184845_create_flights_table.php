@@ -22,6 +22,7 @@ class CreateFlightsTable extends Migration
             $table->integer('availability');
             $table->time('time');
             $table->date('date');
+            $table->double('ticket_price');
             $table->timestamps();
         });
     }

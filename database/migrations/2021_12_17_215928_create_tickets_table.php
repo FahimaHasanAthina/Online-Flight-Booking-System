@@ -17,7 +17,7 @@ class CreateTicketsTable extends Migration
             $table->increments('id');
             $table->integer('flightID')->unsigned();
             $table->foreign('flightID')->references('id')->on('flights');
-            $table->integer('price')->default(NULL);
+            $table->integer('price');
             $table->integer('uID')->unsigned();
             $table->foreign('uID')->references('id')->on('users');
             $table->string('name');

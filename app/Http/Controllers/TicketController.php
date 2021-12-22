@@ -16,7 +16,8 @@ class TicketController extends Controller
     //
     public function book($id){
     	$flight = Flight::where('id', $id)->get();
-    	//
+       
+        //
 
     	$ticket = new Ticket;
     	$ticket->flightID = $id;
@@ -25,7 +26,7 @@ class TicketController extends Controller
     	$ticket->phone = request('phone_no');
     	$ticket->email = request('email');
         $ticket->seats = request('seats');
-
+        
     	foreach($flight as $flight){
     	$number = $flight->availability;
     	if($number<1){
@@ -42,6 +43,8 @@ class TicketController extends Controller
         $ticket->booking_date = date("Y-m-d");
 
     	$ticket->travel_date = $flight->date;
+        $ticket->price = $flight->ticket_price;
+        
     	
     	}
     	$ticket->save();

@@ -19,6 +19,7 @@
 						    <th>Passenger Name</th>
 						    <th>Flight IG</th>
 						    <th>Seats</th>
+							<th>Total_price</th>
 						    <th>Travel Date</th>
 						  </tr>
 						  @foreach($tickets as $ticket)
@@ -27,6 +28,7 @@
 						    <td>{{ $ticket->name }}</td>
 						    <td>{{ $ticket->flightID }}</td>
 						    <td>{{ $ticket->seats }}</td>
+							<td>{{ $ticket->price*$ticket->seats*$ticket->seats }}</td>
 						    <td>{{ $ticket->travel_date }}</td>
 						    <td><a href="{{ url('/ticket/view/' . $ticket->id) }}">View</a></td>					 
 						  </tr>
