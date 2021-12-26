@@ -28,7 +28,7 @@
 						    <td>{{ $ticket->name }}</td>
 						    <td>{{ $ticket->flightID }}</td>
 						    <td>{{ $ticket->seats }}</td>
-							<td>{{ $ticket->price*$ticket->seats*$ticket->seats }}</td>
+							<td>{{ $ticket->price*$ticket->seats }}</td>
 						    <td>{{ $ticket->travel_date }}</td>
 						    <td><a href="{{ url('/ticket/view/' . $ticket->id) }}">View</a></td>					 
 						  </tr>

@@ -26,7 +26,10 @@
 					Seats: {{ $ticket->seats }}
 					</br>
 					</br>
-
+                    
+					Total Price: {{ $ticket->price*$ticket->seats }}
+				    </br>
+			        </br>
 
 					email ID:{{ $ticket->email }}
 					</br>

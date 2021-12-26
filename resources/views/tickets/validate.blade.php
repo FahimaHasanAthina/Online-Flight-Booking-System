@@ -19,7 +19,7 @@
 					</br>
 
 
-					Phone: {{ $ticket->phone_no }}
+					Phone: {{ $ticket->phone }}
 					</br>
 					</br>
 

@@ -18,6 +18,7 @@
 						    <th>Availability</th>
 						    <th>Date</th>
 						    <th>Time</th>
+							<th>Ticket Price</th>
 						  </tr>
 						  @foreach($flights as $flight)
 						  <tr>
@@ -28,6 +29,7 @@
 						    <td>{{ $flight->availability }}</td>
 						    <td>{{ $flight->date }}</td>
 						    <td>{{ $flight->time }}</td>
+							<td>{{ $flight->ticket_price }}</td>
 						    <td><a href="{{ url('/display/ticket/' . $flight->id) }}">Book</a></td>
 						  </tr>
 						   @endforeach

@@ -22,7 +22,7 @@ class CreateTicketsTable extends Migration
             $table->foreign('uID')->references('id')->on('users');
             $table->string('name');
             $table->string('email')->default(NULL);
-            $table->integer('phone')->default(NULL);
+            $table->string('phone')->default(NULL);
             $table->integer('seats')->default(NULL);
             $table->date('booking_date')->default(NULL);;
             $table->date('travel_date')->default(NULL);;

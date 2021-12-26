@@ -23,7 +23,7 @@
                     <form method="POST" action="{{ url('/display/search') }}">
                       {{ csrf_field() }}
                       <p>Enter Source: </p>
-                      <input type="text" name="search"  placeholder="Source" >
+                      <input type="text" name="source"  placeholder="Source" >
 
                       <p>Enter Destination:</p>
                       <input type="text" name="destination"  placeholder="Destination" >

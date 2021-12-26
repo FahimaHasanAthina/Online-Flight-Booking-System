@@ -16,7 +16,7 @@ class FlightController extends Controller
     }
 
     public function search(){
-    	$flights = Flight::where('source', 'like', '%'.request('search').'%')->where('destination', 'like', '%'.request('destination').'%')->get();
+    	$flights = Flight::where('source', 'like', '%'.request('source').'%')->where('destination', 'like', '%'.request('destination').'%')->where('date', 'like', '%'.request('date').'%')->where('coach', 'like', '%'.request('coach').'%')->get();
     	
     	return view('display.search')->with(compact('flights'));
     }

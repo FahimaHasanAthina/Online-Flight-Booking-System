@@ -25,7 +25,12 @@
 					</br>
 
 
-					Phone: {{ $ticket->phone_no }}
+					Phone: {{ $ticket->phone }}
+					</br>
+					</br>
+
+
+					Total Price: {{ $ticket->price*$ticket->seats }}
 					</br>
 					</br>
 
@@ -59,6 +64,13 @@
 					</br>
 					</br>
 
+					<form class="form" method="GET" action="{{ url('/example2') }}">
+						{{ csrf_field() }}
+						<button class="btn btn-lg btn-primary" type="submit">Chekout</button>
+			        </form>
+				    </br>
+			        </br>
+
 					@else
 
 					TICKETS ARE NOT AVAILABLE For THIS Flight
@@ -75,7 +87,6 @@
         </div>
     </div>
 </div>
-
 
 
 
